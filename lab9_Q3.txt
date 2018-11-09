@@ -1,0 +1,6 @@
+ here the  error is ‘char*’ which  cannot convert to ‘double*’ in initialization    double *p = &c;
+ Because c is a char variable while p stores double varibles. 
+
+Here we should have   -->    (double*)&<char>   is correct answer
+
+

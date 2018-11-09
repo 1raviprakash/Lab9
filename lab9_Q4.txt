@@ -1,0 +1,20 @@
+char blocks[3] = {'a','b','c'};
+   char *ptr = &blocks[0];
+   char temp;
+   
+  code                    output
+ 
+ temp = blocks[0];         [a]
+  temp = *(blocks + 2);     [c]
+  temp = *(ptr + 1);        [b]
+  temp = *ptr;              [a]
+
+  ptr = blocks + 1;         [a]
+  temp = *ptr;              [b]
+  temp = *(ptr + 1);        [c]
+
+  ptr = blocks;             [c]
+  temp = *++ptr;            [b]
+  temp = ++*ptr;            [c]
+  temp = *ptr++;            [c]
+  temp = *ptr;              [c]
